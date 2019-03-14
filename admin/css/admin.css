@@ -1,0 +1,46 @@
+.user-panel{
+
+    height: 60px;
+}
+
+.user-panel > .info{
+position: relative;
+left:auto;
+
+}
+
+.skin-blue .sidebar-menu>li.header {
+color: white;
+}
+
+.login-page .main-footer{
+
+    display: none;
+}
+
+p span .nivel{
+
+    font-size: 1rem;
+    color:orange;
+    font-weight: bold;
+}
+
+.bella-icono a{
+
+    padding:8px;
+    margin: 2px;
+   
+}
+
+.form-group #imagen{
+padding: 10px;
+
+}
+#bellacheckb{
+ 
+    font-size: 2rem;
+}
+#fashioncheckf{
+ 
+    font-size: 2rem;
+}
