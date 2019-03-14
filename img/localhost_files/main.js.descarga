@@ -1,0 +1,131 @@
+
+(function() {
+
+    "use strict";
+    document.addEventListener('DOMContentLoaded', function() {
+
+
+    }); //DOM CONTENT LOADED
+})();
+
+
+
+
+
+
+/**funcion para elegir pagina */
+
+
+
+/**funcion pasar de pagina */
+$( function() {
+   
+
+
+
+    var paginaActual=window.location.href;
+    console.log(paginaActual);
+    if ((paginaActual === 'http://localhost/EMPRENDIMIENTO-DAILISYJAIME/index.php') || (paginaActual === 'http://localhost/EMPRENDIMIENTO-DAILISYJAIME/') ){
+        $('.contenedor .contenido-productos:nth-child(1)').fadeIn(1000);
+    }
+    
+
+    if (paginaActual==='http://localhost/EMPRENDIMIENTO-DAILISYJAIME/index.php#comparte'){
+        $('.contenedor .contenido-productos:nth-child(4)').fadeIn(1000);
+    } 
+    if (paginaActual==='http://localhost/EMPRENDIMIENTO-DAILISYJAIME/index.php#fashion'){
+        $('.contenedor .contenido-productos:nth-child(3)').fadeIn(1000);
+    } 
+    if (paginaActual==='http://localhost/EMPRENDIMIENTO-DAILISYJAIME/index.php#bella'){
+        $('.contenedor .contenido-productos:nth-child(2)').fadeIn(1000);
+    } 
+    if (paginaActual==='http://localhost/EMPRENDIMIENTO-DAILISYJAIME/index.php#nosotros'){
+        $('.contenedor .contenido-productos:nth-child(1)').fadeIn(1000);
+    } 
+
+    $(' .navegacion-principal a').on('click', function() {
+       
+        $('.ocultar').hide();
+
+        if ('#nosotros'===$(this).attr('href')) {
+            
+         $('.contenedor .contenido-productos:nth-child(1)').fadeIn(1000);
+         
+
+        }else if ('#bella'===$(this).attr('href')) {
+            
+            $('.contenedor .contenido-productos:nth-child(2)').fadeIn(1000);
+
+           
+
+         } else if('#fashion'===$(this).attr('href')){
+            
+            $('.contenedor .contenido-productos:nth-child(3)').fadeIn(1000);
+            
+
+         }else if('#comparte'===$(this).attr('href')){
+            
+            $('.contenedor .contenido-productos:nth-child(4)').fadeIn(1000);
+           
+
+         }
+          
+     
+    }); 
+});
+
+
+
+
+
+
+
+
+
+
+/**agregando iconos a los productos con hover y quitandolos */
+
+
+$(function() {
+   $('.contenido-producto i').hide();
+   
+
+   $(" .lista-productos .producto").hover( function() {
+       
+      $('.producto:hover  .icono i').fadeIn(900);
+}, function(){
+   $('.contenido-producto i').hide();
+ });
+
+
+
+
+
+});
+
+
+//Menu fijo
+    
+var windowHeight=$(window).height();
+    
+var barraAltura=$('.barra').innerHeight();
+
+$(window).scroll(function(){
+   
+var scroll=$(window).scrollTop();//esta linea es la que nos va ayudar a detectar el scroll, meduante el uso de scrollTop
+  
+    if(scroll>windowHeight){
+    $('.barra').addClass('fixed');
+    $('body').css({'margin-top':barraAltura+'px'});    
+    }else{
+     $('.barra').removeClass('fixed');   
+    $('body').css({'margin-top':'0px'});    
+
+    }
+
+});
+
+         
+         
+         
+         
